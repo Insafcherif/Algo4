@@ -1,0 +1,14 @@
+PROCEDURE sorting(Var Tab : ARRAY_OF INTEGER)
+VAR
+    X,i,j: INTEGER;
+BEGIN
+    FOR i FROM 0 TO Tab.length-1 STEP 1  DO
+        X=Tab[i];
+        j=i-1;
+        WHILE ((j>=0)AND (Tab[j]>X) )DO
+            Tab[j+1]=Tab[j];
+            j=j-1;
+        END_WHILE
+        Tab[j+1]=X;
+    END_FOR
+END
